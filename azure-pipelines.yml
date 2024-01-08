@@ -24,4 +24,4 @@ steps:
     azureSubscriptionConnection: 'aks-service-connection'
     azureResourceGroup: 'aks-rg'
     kubernetesCluster: 'aks-demo'
-    manifests: 'deployment.yaml'
+    manifests: 'application-manifest.yaml'

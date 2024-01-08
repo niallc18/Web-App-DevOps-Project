@@ -21,7 +21,7 @@ steps:
   inputs:
     action: 'deploy'
     connectionType: 'azureResourceManager'
-    azureSubscriptionConnection: 'aks-service-connection'
+    azureSubscriptionConnection: 'Niall Canning DevOps(bba40194-a5aa-4186-8a79-bc6a95b291fa)'
     azureResourceGroup: 'aks-rg'
     kubernetesCluster: 'aks-demo'
     manifests: 'deployment.yaml'

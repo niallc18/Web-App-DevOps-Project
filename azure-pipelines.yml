@@ -12,7 +12,7 @@ pool:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: 'Docker Hub'
+    containerRegistry: 'docker-azure'
     repository: 'mayaaiuga/flask-app-sercrets'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'

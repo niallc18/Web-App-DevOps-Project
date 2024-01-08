@@ -22,6 +22,6 @@ steps:
     action: 'deploy'
     connectionType: 'azureResourceManager'
     azureSubscriptionConnection: 'aks-service-connection'
-    azureResourceGroup: 'aks-rg'
-    kubernetesCluster: 'aks-demo'
+    azureResourceGroup: 'networking-rg'
+    kubernetesCluster: 'terraform-aks-cluster'
     manifests: 'application-manifest.yaml'

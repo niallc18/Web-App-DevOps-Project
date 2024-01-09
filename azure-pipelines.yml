@@ -1,19 +1,17 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- secrets-feature
+- main
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
+- script: echo Hello world!
+  displayName: 'Testing...'
+
 - task: Docker@2
   inputs:
-    containerRegistry: 'Docker Hub'
-    repository: 'mayaaiuga/flask-app-sercrets'
+    containerRegistry: 'docker-azure'
+    repository: 'niallc18/testing-app'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
@@ -21,7 +19,7 @@ steps:
   inputs:
     action: 'deploy'
     connectionType: 'azureResourceManager'
-    azureSubscriptionConnection: 'aks-service-connection'
-    azureResourceGroup: 'aks-rg'
-    kubernetesCluster: 'aks-demo'
-    manifests: 'deployment.yaml'
+    azureSubscriptionConnection: 'Niall Canning DevOps(bba40194-a5aa-4186-8a79-bc6a95b291fa)'
+    azureResourceGroup: 'networking-rg'
+    kubernetesCluster: 'terraform-aks-cluster'
+    manifests: 'application-manifest.yaml'

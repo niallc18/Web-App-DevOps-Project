@@ -56,10 +56,11 @@ kubectl get pods
 kubectl get services
 kubectl port-forward <pod-name> <port:port> e.g. kubectl port-forward flask-app-deployment-xxxxxx-xxxxx 5000:5000
 ```
+
 ## Security
 
-This project makes use of Azure Key Vault to ensure credentials / sensitive data is not hard-coded into the source code, along with the use of gitignore to prevent exposure to any files containing sensitive data. 
-
+- **Azure** This project makes use of Azure Key Vault to ensure credentials / sensitive data is not hard-coded into the source code.  
+- **Git** gitignore to prevent exposure to any files containing sensitive data.
 
 ## Technology Stack
 

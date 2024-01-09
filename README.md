@@ -1,11 +1,13 @@
-# Web-App-DevOps-Project
+# Web-App-DevOps-Project 
 
-Welcome to the Web App DevOps Project repo! This application allows you to efficiently manage and track orders for a potential business. It provides an intuitive user interface for viewing existing orders and adding new ones.
+Welcome to the Web App DevOps Project repo! This application allows you to efficiently manage and track orders for a potential business. It provides an intuitive user interface for viewing existing orders and adding new ones. The application makes use of the software delivery pipeline, enabling CI/CD for development and deployment. 
 
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
+- [Prerequisites](#Prerequisites)
+- [Usage] (#usage)
+- [Security] (#security)
 - [Technology Stack](#technology-stack)
 - [Contributors](#contributors)
 - [License](#license)
@@ -26,24 +28,38 @@ Welcome to the Web App DevOps Project repo! This application allows you to effic
 
 - **Data Validation:** Ensure data accuracy and completeness with required fields, date restrictions, and card number validation.
 
-## Getting Started
 
-### Prerequisites
+## Prerequisites
 
-For the application to succesfully run, you need to install the following packages:
+For the application to succesfully run, you need to install the following packages, as seen in the requirements.txt:
 
 - flask (version 2.2.2)
 - pyodbc (version 4.0.39)
 - SQLAlchemy (version 2.0.21)
 - werkzeug (version 2.2.3)
+- azure-identity (version 1.6.0)
+- azure-keyvault-secrets (version 4.1.0)
 
-### Usage
+## Usage
 
 To run the application, you simply need to run the `app.py` script in this repository. Once the application starts you should be able to access it locally at `http://127.0.0.1:5000`. Here you will be meet with the following two pages:
 
 1. **Order List Page:** Navigate to the "Order List" page to view all existing orders. Use the pagination controls to navigate between pages.
 
 2. **Add New Order Page:** Click on the "Add New Order" tab to access the order form. Complete all required fields and ensure that your entries meet the specified criteria.
+
+For Kubernetes, run the following commands:
+
+```
+kubectl apply -f application-manifest.yaml
+kubectl get pods
+kubectl get services
+kubectl port-forward <pod-name> <port:port> e.g. kubectl port-forward flask-app-deployment-xxxxxx-xxxxx 5000:5000
+```
+## Security
+
+This project makes use of Azure Key Vault to ensure credentials / sensitive data is not hard-coded into the source code, along with the use of gitignore to prevent exposure to any files containing sensitive data. 
+
 
 ## Technology Stack
 
@@ -52,6 +68,8 @@ To run the application, you simply need to run the `app.py` script in this repos
 - **Frontend:** The user interface is designed using HTML, CSS, and JavaScript to ensure a smooth and intuitive user experience.
 
 - **Database:** The application employs an Azure SQL Database as its database system to store order-related data.
+
+- **DevOps Technologies** Azure, Kubernetes, Terraform, Docker.
 
 ## Contributors 
 

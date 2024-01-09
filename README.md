@@ -6,8 +6,8 @@ Welcome to the Web App DevOps Project repo! This application allows you to effic
 
 - [Features](#features)
 - [Prerequisites](#Prerequisites)
-- [Usage] (#usage)
-- [Security] (#security)
+- [Usage](#usage)
+- [Security](#security)
 - [Technology Stack](#technology-stack)
 - [Contributors](#contributors)
 - [License](#license)
@@ -59,8 +59,8 @@ kubectl port-forward <pod-name> <port:port> e.g. kubectl port-forward flask-app-
 
 ## Security
 
-- **Azure** This project makes use of Azure Key Vault to ensure credentials / sensitive data is not hard-coded into the source code.  
-- **Git** gitignore to prevent exposure to any files containing sensitive data.
+- **Azure:** This project makes use of Azure Key Vault to ensure credentials / sensitive data is not hard-coded into the source code.  
+- **Git:** gitignore to prevent exposure to any files containing sensitive data.
 
 ## Technology Stack
 

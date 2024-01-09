@@ -16,7 +16,7 @@ Welcome to the Web App DevOps Project repo! This application allows you to effic
 
 - **DevOps Architecture:** View the architecture of the application.
 
-![DevOps Image](https://github.com/niallc18/Web-App-DevOps-Project/devops_image.png) 
+![DevOps Image](https://github.com/niallc18/Web-App-DevOps-Project/blob/main/devops_image.png) 
 
 - **Order List:** View a comprehensive list of orders including details like date UUID, user ID, card number, store code, product code, product quantity, order date, and shipping date.
   
